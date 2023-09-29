@@ -15,13 +15,12 @@ const initdb = async () =>
 
 // A method that accepts some content and adds it to the database
 export const putDb = async (content) => {
-  console.log("Updated the database");
   const textEditorDb = await openDB("jate", 1);
   const tx = textEditorDb.transaction("jate", "readwrite");
   const store = tx.objectStore("jate");
   const request = store.put({ id: 1, jate: content });
   const result = await request;
-  console.log("Text edited and saved to the database");
+  console.log("Updated the database");
 };
 
 // A method that gets all the content from the database
