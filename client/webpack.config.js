@@ -37,7 +37,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({ template: "./index.html", title: "J.A.T.E" }),
 
-      // Injects our custom service worker
+      // Injects the custom service worker
       injectManifest,
 
       // Creates a manifest.json file.
